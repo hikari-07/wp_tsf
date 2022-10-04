@@ -1,0 +1,2965 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 768px) {
+  body {
+    /*各ページのメインイメージ*/
+    /*各ページのタイトル*/
+  }
+
+  body .inner {
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  body .responsive {
+    display: block;
+  }
+
+  body .default {
+    display: none;
+  }
+
+  body .none-768 {
+    display: none;
+  }
+
+  body .block-768 {
+    display: block;
+  }
+
+  body .content-title {
+    font-size: 18px;
+    padding: 10px 0 10px 8px;
+    margin-bottom: 20px;
+  }
+
+  body .page-main-image {
+    text-align: right;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  body .page-main-image img {
+    width: 92%;
+    height: auto;
+  }
+
+  body .page-title {
+    border-left: 8px solid #3972B7;
+    font-size: 20px;
+    line-height: 1.7;
+    padding: 8px 0 10px 14px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  body .shitsumon-otoiawase {
+    border: 10px solid #EAEDF6;
+    height: 200px;
+    width: 100%;
+    display: flex;
+  }
+
+  body .shitsumon-otoiawase .shitumon-left {
+    font-size: 16px;
+  }
+
+  body .shitsumon-otoiawase .shitumon-left p {
+    height: 160px;
+    line-height: 160px;
+    margin: 10px 0;
+    border-right: 1px solid #707070;
+  }
+
+  body .shitsumon-otoiawase .otoiawase-right {
+    font-size: 16px;
+  }
+
+  body .shitsumon-otoiawase .otoiawase-right p {
+    text-align: center;
+    height: 180px;
+    line-height: 180px;
+    margin: 0px;
+  }
+
+  body header .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fff;
+    z-index: 90;
+  }
+
+  body header .fixed .header-main-menu {
+    display: none;
+  }
+
+  body header .fixed .header-sub-menu {
+    display: none;
+  }
+
+  body header .fixed .hamburger-menu {
+    display: block;
+    /*ボタンの見た目*/
+    /*ハンバーガーメニュー開いた時の見た目*/
+  }
+
+  body header .fixed .hamburger-menu .menu-btn {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    height: 85px;
+    width: 85px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #4185B2;
+  }
+
+  body header .fixed .hamburger-menu .menu-btn span,
+  body header .fixed .hamburger-menu .menu-btn span:before,
+  body header .fixed .hamburger-menu .menu-btn span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+  }
+
+  body header .fixed .hamburger-menu .menu-btn span:before {
+    bottom: 8px;
+  }
+
+  body header .fixed .hamburger-menu .menu-btn span:after {
+    top: 8px;
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check {
+    display: none;
+  }
+
+  body header .fixed .hamburger-menu .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul {
+    padding: 70px 40px 0;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li {
+    border-bottom: solid 1px #1D2088;
+    list-style: none;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #1D2088;
+    text-decoration: none;
+    padding: 20px 15px 15px 30px;
+    position: relative;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a:checked~.menu-btn span::after {
+    transform: rotate(-45deg);
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #1D2088;
+    border-right: solid 2px #1D2088;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 20px;
+  }
+
+  body header .fixed .hamburger-menu .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #fff;
+    transition: all 0.5s;
+    /*アニメーション設定*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-content {
+    left: 0;
+    /*メニューを画面内へ*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check {
+    display: none;
+  }
+
+  body header .fixed .hamburger-menu .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul {
+    padding: 70px 10px 0;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  }
+
+  body header .fixed .hamburger-menu .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;
+    /*アニメーション設定*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-content {
+    left: 0;
+    /*メニューを画面内へ*/
+  }
+
+  body footer {
+    height: 450px;
+  }
+
+  body footer .footer-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  body footer .footer-content .footer-left {
+    margin: 0px auto;
+    display: flex;
+  }
+
+  body footer .footer-content .footer-left .footer-logo {
+    margin-bottom: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  body footer .footer-content .footer-left .footer-address {
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+    padding-left: 4px;
+  }
+
+  body footer .footer-content .footer-left .footer-address .footer-company {
+    font-size: 15px;
+  }
+
+  body footer .footer-content .footer-left .footer-icon {
+    display: none;
+  }
+
+  body footer .footer-content .footer-right {
+    margin-bottom: 0px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-top {
+    margin-top: 26px;
+    margin-bottom: -16px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-top ul {
+    display: block;
+    padding-inline-start: 0px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-top ul li {
+    border-right: none;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-top ul li:last-child {
+    border-right: none;
+  }
+
+  body footer .footer-content .footer-right .footer-right-bottom ul {
+    display: block;
+    padding-inline-start: 0px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-bottom ul li {
+    border-right: none;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-bottom ul li a {
+    color: #fff;
+  }
+
+  body footer .footer-content .footer-right .footer-right-bottom ul li:last-child {
+    border-right: none;
+  }
+
+  body footer .footer-content .footer-right .footer-icon-responsive {
+    padding: 6px 24px;
+    display: none;
+  }
+
+  body footer .footer-content .footer-right .footer-icon-responsive .fa-twitter {
+    color: #1DA1F1;
+    font-size: 22px;
+    margin-right: 1px;
+  }
+
+  body footer .footer-content .footer-right .footer-icon-responsive .fa-facebook {
+    color: #3A5693;
+    font-size: 21px;
+    margin-right: 2px;
+  }
+
+  body footer .footer-content .footer-right .footer-icon-responsive .fa-square-rss {
+    color: #EB9301;
+    font-size: 22px;
+  }
+
+  body footer .copyright {
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  #home main {
+    padding-top: 40px;
+  }
+
+  #home main .page .main-image {
+    position: relative;
+    z-index: -1;
+  }
+
+  #home main .page .main-image .main-image-txt {
+    /*配置（上下左右を中央寄せ）*/
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -125px;
+    /*文字の設定*/
+    font-size: 22px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  #home main .page .home-news {
+    height: 100px;
+    margin-bottom: 40px;
+  }
+
+  #home main .page .home-news ul {
+    margin: 10px 10px 16px 20px;
+    padding-inline-start: 0px;
+  }
+
+  #home main .page .home-news ul li {
+    margin-left: 0px;
+  }
+
+  #home main .page .home-news ul li time {
+    display: block;
+    margin-bottom: -16px;
+  }
+
+  #home main .page .home-news ul li span {
+    margin-left: 0px;
+    line-height: 1.4;
+  }
+
+  #home main .page .home-news .home-news-button {
+    margin-right: 10px;
+    width: 30%;
+  }
+
+  #home main .page .home-news .home-news-button a {
+    display: block;
+    background-color: #4185B2;
+    color: #fff;
+    max-width: 180px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 40px;
+  }
+
+  #home main .page .responsive-h2 {
+    display: none;
+  }
+
+  #home main .page .main-massege {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  #home main .page .main-massege .main-message-left {
+    width: 50%;
+  }
+
+  #home main .page .main-massege .main-message-left h2 {
+    display: block;
+    border-left: 8px solid #3972B7;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 6px 0 6px 10px;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+
+  #home main .page .main-massege .main-message-left p {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  #home main .page .main-massege .main-message-right {
+    width: 45%;
+  }
+
+  #home main .page .main-massege .main-message-right img {
+    width: 100%;
+  }
+
+  #home main .page .gokatsuyou-txt {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  #home main .page .gokatsuyou-txt section {
+    width: 94%;
+    text-align: center;
+    padding: 20px 20px 40px 20px;
+    border: 1px solid #808080;
+    margin-bottom: 40px;
+  }
+
+  #home main .page .gokatsuyou-txt section .gokatsuyou-img {
+    margin-bottom: 10px;
+  }
+
+  #home main .page .gokatsuyou-txt section h3 {
+    font-size: 16px;
+    color: #3972B7;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    height: inherit;
+  }
+
+  #home main .page .gokatsuyou-txt section .symbol-line {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  #home main .page .gokatsuyou-txt section p {
+    text-align: left;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  #home main .page .uriage-up {
+    padding: 30px 10px;
+    margin-bottom: 60px;
+  }
+
+  #home main .page .uriage-up .uriage-inner {
+    background-color: #EBEFF7;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-img {
+    width: 16%;
+    margin-left: 20px;
+    margin-right: 0px;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-img img {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-txt {
+    margin-right: 0px;
+    margin-left: 10px;
+    max-width: 410px;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-txt h3 {
+    width: 100%;
+    text-align: left;
+    margin: 0 auto 10px auto;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-txt p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-button {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-button p {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-right: 0px;
+    text-align: center;
+  }
+
+  #home main .page .service-txt {
+    margin-bottom: 70px;
+    /*上段の横並び*/
+    /*下段の横並び*/
+  }
+
+  #home main .page .service-txt div a section {
+    width: 67%;
+    margin: 0 auto;
+  }
+
+  #home main .page .service-txt div a section .service-img {
+    margin-left: 30px;
+  }
+
+  #home main .page .service-txt div a section p {
+    font-size: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  #home main .page .service-txt div a section i {
+    margin-right: 30px;
+  }
+
+  #home main .page .service-txt div .left {
+    margin-left: 20px;
+  }
+
+  #home main .page .service-txt div .right {
+    margin-right: 20px;
+  }
+
+  #home main .page .service-txt .service-top {
+    margin-bottom: 40px;
+  }
+
+  #home main .page .service-txt .service-bottom {
+    margin-bottom: 0px;
+  }
+
+  #company .goaisatsu-txt {
+    margin: 0 auto;
+    line-height: 2;
+    margin-bottom: 70px;
+  }
+
+  #company .goaisatsu-txt .goaisatsu-main {
+    margin-bottom: 6px;
+    text-align: justify;
+  }
+
+  #company .table-background {
+    background-color: #EBEFF7;
+    border-radius: 20px;
+  }
+
+  #company .table-background table {
+    margin: 0 auto 60px auto;
+    width: 100%;
+  }
+
+  #company .table-background table tr th {
+    display: block;
+    padding: 10px 0px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  #company .table-background table tr .th-first {
+    border-radius: 20px 20px 0 0;
+  }
+
+  #company .table-background table tr .th-email {
+    border-bottom: none;
+    border-radius: 0 0 0 0px;
+  }
+
+  #company .table-background table tr td {
+    line-height: 1.5;
+    padding: 10px 10px 10px 14%;
+    display: block;
+  }
+
+  #company .table-background table tr .td-email {
+    border-bottom: none;
+    padding-bottom: 20px;
+  }
+
+  #company .osaka {
+    margin-bottom: 40px;
+  }
+
+  #company .okinawa {
+    margin-bottom: 70px;
+  }
+
+  #company .company-address {
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  #company .chizu {
+    text-align: center;
+    width: 100%;
+  }
+
+  #websystem .websystem-detail {
+    margin-bottom: 40px;
+  }
+
+  #websystem .websystem-detail .websystem-txt {
+    width: 100%;
+  }
+
+  #websystem .websystem-detail .websystem-txt h3 {
+    padding: 10px 0px 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  #websystem .websystem-detail .websystem-txt p {
+    line-height: 1.8;
+    padding: 10px 30px 20px 20px;
+  }
+
+  #websystem .websystem-detail .websystem-txt .needs-inquiry {
+    width: 90%;
+    height: 56px;
+    margin: 0px auto 20px auto;
+    color: #707070;
+  }
+
+  #websystem .websystem-detail .websystem-txt .needs-inquiry h4 {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  #websystem .websystem-detail .websystem-txt .needs-inquiry .needs-detail span {
+    font-size: 13px;
+  }
+
+  #websystem .websystem-detail .schedule h3 {
+    font-size: 14px;
+  }
+
+  #websystem .websystem-detail .schedule p {
+    font-size: 14px;
+  }
+
+  #websystem .websystem-detail .websystem-img {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  #websystem .websystem-detail .websystem-img img {
+    width: 100%;
+  }
+
+  #websystem .websystem-detail:last-child {
+    margin-bottom: 150px;
+  }
+
+  #websystem .column {
+    display: flex;
+  }
+
+  #websystem .column .right {
+    margin-left: 14px;
+  }
+
+  #websystem .websystem-inquiry-buttom {
+    width: 50%;
+    height: 56px;
+    margin: 0px auto 60px auto;
+  }
+
+  #websystem .websystem-inquiry-buttom p {
+    display: block;
+    color: #707070;
+    padding-left: 50px;
+    font-size: 14px;
+  }
+
+  #websystem .websystem-inquiry-buttom .inquiry-img {
+    padding-right: 30px;
+    padding-bottom: 14px;
+  }
+
+  #websystem .websystem-inquiry-buttom .inquiry-img img {
+    height: 1px;
+  }
+
+  #homepage .contetn-txt {
+    margin: 0 auto 50px auto;
+    line-height: 2;
+  }
+
+  #homepage .production {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  #homepage .production section {
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+  }
+
+  #homepage .production section .production-content img {
+    margin-bottom: 20px;
+  }
+
+  #homepage .inner .inquiry-buttom {
+    width: 50%;
+    height: 56px;
+    margin: 0px auto 60px auto;
+    font-size: 14px;
+  }
+
+  #homepage .production-flow {
+    margin-bottom: 60px;
+  }
+
+  #homepage .production-flow .flow-flex {
+    padding: 30px 20px 20px 20px;
+  }
+
+  #homepage .production-flow .flow-flex .flow-images {
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  #homepage .production-flow .flow-flex .flow-txt {
+    margin-left: 0px;
+  }
+
+  #homepage .production-flow .flow-flex .flow-txt h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  #homepage .production-flow .flow-flex .flow-txt p {
+    text-align: left;
+    line-height: 1.7;
+  }
+
+  #homepage .production-flow .flow-flex-last {
+    padding-bottom: 45px;
+    padding-top: 45px;
+  }
+
+  #useful .useful-content-all {
+    margin: 0 auto 50px auto;
+  }
+
+  #useful .useful-content-all .useful-detail {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #useful .useful-content-all .useful-detail i {
+    font-size: 11px;
+    margin-right: 0px;
+  }
+
+  #useful .useful-content-all .useful-detail a img {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  #useful .useful-content-all .useful-detail a h3 {
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0px 2px 0px 2px;
+  }
+
+  #useful .useful-content-all .useful-detail-left {
+    margin-right: 20px;
+  }
+
+  #needs .need-content-title {
+    font-size: 22px;
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  #needs .need-content-title:after {
+    background-color: #C9E4F1;
+    border-radius: 20px;
+    content: "";
+    display: block;
+    height: 16px;
+    margin: -10px -16px 50px -16px;
+  }
+
+  #needs .main-title {
+    margin-bottom: 80px;
+    margin-top: 40px;
+  }
+
+  #needs .main-title .title-left {
+    margin-left: 0px;
+  }
+
+  #needs .main-title .title-left img {
+    display: none;
+  }
+
+  #needs .main-title .title-left h2 {
+    font-size: 17px;
+    padding: 6px 0px 6px 10px;
+    margin-bottom: 16px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  #needs .main-title .title-left p {
+    margin: 10px 20px 40px 20px;
+    font-size: 15px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  #needs .main-title .title-left .button {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  #needs .main-title .title-left .button a {
+    width: 80%;
+    padding: 20px 50px;
+    font-size: 15px;
+  }
+
+  #needs .main-title .title-right {
+    width: 100%;
+  }
+
+  #needs .main-title .title-right img {
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #needs .recommend {
+    border: 2px solid #4185B2;
+    padding: 20px 10px;
+    border-radius: 50px;
+    margin-bottom: 70px;
+    margin-top: -20px;
+  }
+
+  #needs .recommend p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  #needs .feature {
+    background-color: #EAEDF6;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    margin-bottom: 60px;
+  }
+
+  #needs .feature .feature-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box {
+    width: 430px;
+    height: 480px;
+    border-radius: 4px;
+    padding-bottom: 10px;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box .feature-image {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box .feature-image img {
+    width: 100%;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box p {
+    line-height: 1.6;
+    padding: 0px 20px;
+  }
+
+  #needs .feature .feature-detail .left {
+    margin-left: 0px;
+  }
+
+  #needs .feature .feature-detail .right {
+    margin-right: 0px;
+  }
+
+  #needs .feature .feature-detail i {
+    font-size: 70px;
+    color: #4286B2;
+    margin: 0 10px;
+  }
+
+  #needs .feature .button {
+    margin-top: 70px;
+    text-align: center;
+  }
+
+  #needs .feature .button a {
+    padding: 20px 50px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  #needs .function {
+    margin-top: 40px;
+  }
+
+  #needs .function .function-flex {
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  #needs .function .function-flex .function-detail {
+    max-width: 80%;
+    background-color: #EFF8FC;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  #needs .function .function-flex .function-detail .function-image {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #needs .function .function-flex .function-detail h3 {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  #needs .function .function-flex .function-detail .border {
+    width: 30px;
+    border-top: 1px solid #707070;
+    margin: 0 auto 20px auto;
+  }
+
+  #needs .function .function-flex .function-detail p {
+    margin: 0 40px;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  #needs .function .bottom {
+    margin-bottom: 60px;
+  }
+
+  #needs .voice-txt {
+    margin: 0 auto 70px auto;
+  }
+
+  #needs .voice-txt .voice-left {
+    margin-right: 10px;
+  }
+
+  #needs .voice-txt .voice-left span {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  #needs .voice-txt .voice-right p {
+    line-height: 1.7;
+  }
+
+  #needs .introduction {
+    margin-bottom: 60px;
+  }
+
+  #needs .introduction .step {
+    display: flex;
+    max-width: 80%;
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+
+  #needs .introduction .step .step-title {
+    border: 1px solid #4185B2;
+    border-radius: 50%;
+    padding: 0px;
+    width: 110px;
+    height: 110px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 30px;
+  }
+
+  #needs .introduction .step .step-title p {
+    margin-top: 18px;
+    margin-bottom: 6px;
+    color: #4185B2;
+  }
+
+  #needs .introduction .step .step-txt {
+    margin-bottom: 20px;
+  }
+
+  #needs .introduction .step .step-txt p {
+    line-height: 1.6;
+  }
+
+  #needs .introduction .step .step-txt .bold {
+    font-weight: bold;
+  }
+
+  #needs .needs-question {
+    list-style-type: none;
+    max-width: 980px;
+    border: 1px solid #C1C1C1;
+    border-radius: 30px;
+    margin-bottom: 70px;
+  }
+
+  #needs .needs-question li {
+    padding: 24px 0 0 0px;
+    color: #3972B7;
+  }
+
+  #needs .needs-question li .question-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #needs .needs-question li .question-flex .question-left {
+    display: flex;
+  }
+
+  #needs .needs-question li .question-flex .question-left .fa-brands {
+    margin-right: 10px;
+  }
+
+  #needs .needs-question li .question-flex .question-right {
+    margin-right: 10px;
+  }
+
+  #needs .needs-question li .border {
+    width: 94%;
+    margin: 24px auto 0 auto;
+  }
+
+  #needs .needs-question li .fa-solid {
+    text-align: right;
+    display: block;
+  }
+
+  #needs .needs-question li:first-child {
+    background-color: #C1C1C1;
+    border-radius: 29px 29px 0 0;
+    font-size: 18px;
+    color: #707070;
+    padding-left: 30px;
+    padding-bottom: 35px;
+  }
+
+  #needs .needs-question li:last-child {
+    padding-bottom: 35px;
+  }
+
+  #needs .form {
+    background-color: #EBEFF7;
+    width: 94%;
+    padding: 50px 70px;
+    margin-bottom: 70px;
+  }
+
+  #needs .form p {
+    margin-bottom: 40px;
+    display: flex;
+  }
+
+  #needs .form p label {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+  }
+
+  #needs .form p input {
+    display: block;
+    width: 50%;
+    height: 28px;
+  }
+
+  #needs .form p select {
+    width: 50%;
+    height: 28px;
+    margin: 0;
+  }
+
+  #needs .form .line-account {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #needs .form .line-account label {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  #needs .form .line-account select {
+    margin-left: 50%;
+    width: 50%;
+  }
+
+  #needs .form .tool select {
+    width: 50%;
+  }
+
+  #needs .form .inquiry-textarea {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  #needs .form .inquiry-textarea textarea {
+    margin-left: 3px;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+
+  #needs .form .terms {
+    margin: 0 auto 20px auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    font-size: 15px;
+  }
+
+  #needs .form .terms input {
+    width: 8%;
+    height: 18px;
+    margin: 2px -2px 3px 4px;
+  }
+
+  #needs .form .terms label {
+    margin-left: 2px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  #needs .form .terms label a {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+  }
+
+  #needs .form button {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+    height: 70px;
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+  }
+
+  #inquiry .page-title-bottom {
+    margin-bottom: 50px;
+  }
+
+  #inquiry .form p input {
+    width: 100%;
+  }
+
+  #inquiry input.checkbox {
+    width: auto !important;
+    margin: -2px 4px 3px 5px;
+  }
+
+  #inquiry .form .terms a {
+    height: fit-content;
+  }
+
+  #inquiry .form .inquiry-textarea {
+    display: block;
+  }
+
+  #inquiry .form .inquiry-textarea textarea {
+    width: 100%;
+  }
+
+  #inquiry .form .terms {
+    display: flex;
+  }
+
+  #news .news-background {
+    padding: 50px 0;
+    margin-bottom: 70px;
+  }
+
+  #news .news-background .news-all {
+    max-width: 100%;
+    border-radius: 30px;
+    margin-bottom: 50px;
+  }
+
+  #news .news-background .news-all li {
+    padding: 20px 20px 0 20px;
+    color: #4d4d4d;
+  }
+
+  #news .news-background .news-all li .news-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  #news .news-background .news-all li .news-flex .news-left {
+    font-size: 20px;
+    margin: 0 10px 0 0px;
+  }
+
+  #news .news-background .news-all li .news-flex .news-right {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+    font-size: 15px;
+  }
+
+  #news .news-background .news-all li .news-flex .news-right time {
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
+
+  #news .news-background .news-all li .news-flex .question-right {
+    margin-right: 70px;
+  }
+
+  #news .news-background .news-all li .border {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  #news .news-background .news-all li:last-child {
+    padding-bottom: 45px;
+  }
+
+  #news .news-background .back-number nav {
+    width: 268px;
+    margin: 0 auto;
+  }
+
+  #news .news-background .back-number nav ul {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+  }
+
+  #news .news-background .back-number nav ul li {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-size: 16px;
+    /*各ページのメインイメージ*/
+    /*各ページのタイトル*/
+  }
+
+  body .inner {
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  body .responsive {
+    display: block;
+  }
+
+  body .default {
+    display: none;
+  }
+
+  body .none-768 {
+    display: block;
+  }
+
+  body .block-768 {
+    display: none;
+  }
+
+  body .content-title {
+    font-size: 18px;
+    padding: 10px 0 10px 8px;
+    margin-bottom: 20px;
+  }
+
+  body .page-main-image {
+    text-align: right;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  body .page-main-image img {
+    width: 92%;
+    height: auto;
+  }
+
+  body .page-title {
+    border-left: 8px solid #3972B7;
+    font-size: 20px;
+    line-height: 1.7;
+    padding: 8px 0 10px 14px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  body .shitsumon-otoiawase {
+    border: 10px solid #EAEDF6;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 0px;
+  }
+
+  body .shitsumon-otoiawase .shitumon-left {
+    font-size: 16px;
+  }
+
+  body .shitsumon-otoiawase .shitumon-left p {
+    height: 160px;
+    line-height: 160px;
+    margin: 10px 0;
+    border-right: 1px solid #707070;
+  }
+
+  body .shitsumon-otoiawase .otoiawase-right {
+    font-size: 16px;
+  }
+
+  body .shitsumon-otoiawase .otoiawase-right p {
+    text-align: center;
+    height: 180px;
+    line-height: 180px;
+    margin: 0px;
+  }
+
+  body header .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fff;
+    z-index: 90;
+  }
+
+  body header .fixed .header-main-menu {
+    display: none;
+  }
+
+  body header .fixed .header-sub-menu {
+    display: none;
+  }
+
+  body header .fixed .hamburger-menu {
+    display: block;
+    /*ボタンの見た目*/
+    /*ハンバーガーメニュー開いた時の見た目*/
+  }
+
+  body header .fixed .hamburger-menu .menu-btn {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    height: 85px;
+    width: 85px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #4185B2;
+  }
+
+  body header .fixed .hamburger-menu .menu-btn span,
+  body header .fixed .hamburger-menu .menu-btn span:before,
+  body header .fixed .hamburger-menu .menu-btn span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+  }
+
+  body header .fixed .hamburger-menu .menu-btn span:before {
+    bottom: 8px;
+  }
+
+  body header .fixed .hamburger-menu .menu-btn span:after {
+    top: 8px;
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check {
+    display: none;
+  }
+
+  body header .fixed .hamburger-menu .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul {
+    padding: 70px 40px 0;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li {
+    border-bottom: solid 1px #1D2088;
+    list-style: none;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #1D2088;
+    text-decoration: none;
+    padding: 20px 15px 15px 30px;
+    position: relative;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a:checked~.menu-btn span::after {
+    transform: rotate(-45deg);
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #1D2088;
+    border-right: solid 2px #1D2088;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 20px;
+  }
+
+  body header .fixed .hamburger-menu .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #fff;
+    transition: all 0.5s;
+    /*アニメーション設定*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-content {
+    left: 0;
+    /*メニューを画面内へ*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check {
+    display: none;
+  }
+
+  body header .fixed .hamburger-menu .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #3584bb;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul {
+    padding: 70px 10px 0;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+
+  body header .fixed .hamburger-menu .menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  }
+
+  body header .fixed .hamburger-menu .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    /*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;
+    /*アニメーション設定*/
+  }
+
+  body header .fixed .hamburger-menu #menu-btn-check:checked~.menu-content {
+    left: 0;
+    /*メニューを画面内へ*/
+  }
+
+  body footer {
+    height: 450px;
+  }
+
+  body footer .footer-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  body footer .footer-content .footer-left {
+    margin: 0px auto;
+    display: flex;
+  }
+
+  body footer .footer-content .footer-left .footer-logo {
+    margin-bottom: 0px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  body footer .footer-content .footer-left .footer-address {
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 7px;
+    padding-left: 4px;
+  }
+
+  body footer .footer-content .footer-left .footer-address .footer-company {
+    font-size: 12px;
+  }
+
+  body footer .footer-content .footer-left .footer-address address {
+    font-size: 12px;
+  }
+
+  body footer .footer-content .footer-left .footer-icon {
+    display: none;
+  }
+
+  body footer .footer-content .footer-right {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-top {
+    margin-top: 26px;
+    margin-bottom: -16px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-top ul {
+    display: block;
+    padding-inline-start: 0px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-top ul li {
+    border-right: none;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-top ul li:last-child {
+    border-right: none;
+  }
+
+  body footer .footer-content .footer-right .footer-right-bottom ul {
+    display: block;
+    padding-inline-start: 0px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-bottom ul li {
+    border-right: none;
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  body footer .footer-content .footer-right .footer-right-bottom ul li a {
+    color: #fff;
+  }
+
+  body footer .footer-content .footer-right .footer-right-bottom ul li:last-child {
+    border-right: none;
+  }
+
+  body footer .footer-content .footer-right .footer-icon-responsive {
+    padding: 6px 24px;
+    display: none;
+  }
+
+  body footer .footer-content .footer-right .footer-icon-responsive .fa-twitter {
+    color: #1DA1F1;
+    font-size: 22px;
+    margin-right: 1px;
+  }
+
+  body footer .footer-content .footer-right .footer-icon-responsive .fa-facebook {
+    color: #3A5693;
+    font-size: 21px;
+    margin-right: 2px;
+  }
+
+  body footer .footer-content .footer-right .footer-icon-responsive .fa-square-rss {
+    color: #EB9301;
+    font-size: 22px;
+  }
+
+  body footer .copyright {
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+  }
+
+  body footer .copyright small {
+    font-size: 11px;
+  }
+
+  #home main {
+    padding-top: 40px;
+  }
+
+  #home main .page .main-image {
+    position: relative;
+    z-index: -1;
+    margin-top: -10px;
+  }
+
+  #home main .page .main-image .main-image-txt {
+    /*配置（上下左右を中央寄せ）*/
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -90px;
+    /*文字の設定*/
+    font-size: 16px;
+    line-height: 1.4;
+    color: #4185B2;
+    text-align: center;
+  }
+
+  #home main .page .home-news {
+    display: block;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+  #home main .page .home-news ul {
+    margin-bottom: 16px;
+    margin-top: 10px;
+  }
+
+  #home main .page .home-news ul li {
+    margin-left: 0px;
+  }
+
+  #home main .page .home-news ul li time {
+    color: #4185B2;
+    display: block;
+    margin-bottom: -6px;
+  }
+
+  #home main .page .home-news ul li span {
+    margin-left: 0px;
+    line-height: 1.4;
+  }
+
+  #home main .page .home-news .home-news-button {
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  #home main .page .home-news .home-news-button a {
+    display: block;
+    background-color: #4185B2;
+    color: #fff;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 40px;
+  }
+
+  #home main .page .responsive-h2 {
+    display: block;
+    border-left: 8px solid #3972B7;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+    padding: 10px 0 10px 14px;
+    margin-bottom: 40px;
+  }
+
+  #home main .page .main-massege {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+
+  #home main .page .main-massege .main-message-left {
+    width: 100%;
+  }
+
+  #home main .page .main-massege .main-message-left h2 {
+    display: none;
+  }
+
+  #home main .page .main-massege .main-message-left p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #home main .page .main-massege .main-message-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #home main .page .main-massege .main-message-right img {
+    width: 100%;
+  }
+
+  #home main .page .gokatsuyou-txt {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  #home main .page .gokatsuyou-txt section {
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px 40px 20px;
+    border: 1px solid #808080;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+  }
+
+  #home main .page .gokatsuyou-txt section .gokatsuyou-img {
+    margin-bottom: 10px;
+  }
+
+  #home main .page .gokatsuyou-txt section h3 {
+    font-size: 16px;
+    color: #3972B7;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    height: inherit;
+  }
+
+  #home main .page .gokatsuyou-txt section .symbol-line {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  #home main .page .gokatsuyou-txt section p {
+    text-align: left;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  #home main .page .uriage-up {
+    background-color: #3972B7;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+  }
+
+  #home main .page .uriage-up .uriage-inner {
+    background-color: #EBEFF7;
+    display: block;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-img {
+    margin: 0 auto 30px auto;
+    width: 40%;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-txt {
+    margin: 0 auto;
+    width: 94%;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-txt h3 {
+    font-size: 18px;
+    font-family: "Shippori Mincho", serif;
+    margin-bottom: 30px;
+    width: fit-content;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-txt p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-button {
+    display: block;
+  }
+
+  #home main .page .uriage-up .uriage-inner .uriage-button p {
+    font-size: 14px;
+    margin: 0 auto;
+  }
+
+  #home main .page .service-txt {
+    margin-bottom: 60px;
+    /*上段の横並び*/
+    /*下段の横並び*/
+    /*左の列のマージン*/
+    /*右の列のマージン*/
+  }
+
+  #home main .page .service-txt div a section {
+    width: 100%;
+    margin: 0 auto 40px auto;
+  }
+
+  #home main .page .service-txt div a section .service-img {
+    margin-left: 30px;
+  }
+
+  #home main .page .service-txt div a section p {
+    font-size: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  #home main .page .service-txt div a section i {
+    margin-right: 30px;
+  }
+
+  #home main .page .service-txt div .left {
+    margin-left: 0px;
+  }
+
+  #home main .page .service-txt div .right {
+    margin-right: 0px;
+  }
+
+  #home main .page .service-txt .service-top {
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  #home main .page .service-txt .service-bottom {
+    display: block;
+  }
+
+  #home main .page .service-txt .service-left {
+    margin: 0 auto 30px auto;
+  }
+
+  #home main .page .service-txt .service-right {
+    margin: 0 auto 30px auto;
+  }
+
+  #company .goaisatsu-txt {
+    margin: 0 auto;
+    line-height: 2;
+    margin-bottom: 70px;
+  }
+
+  #company .goaisatsu-txt .goaisatsu-main {
+    margin-bottom: 6px;
+    text-align: justify;
+  }
+
+  #company .table-background {
+    background-color: #EBEFF7;
+    border-radius: 20px;
+  }
+
+  #company .table-background table {
+    margin: 0 auto 60px auto;
+    width: 100%;
+  }
+
+  #company .table-background table tr th {
+    display: block;
+    padding: 10px 0px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  #company .table-background table tr .th-first {
+    border-radius: 20px 20px 0 0;
+  }
+
+  #company .table-background table tr .th-email {
+    border-bottom: none;
+    border-radius: 0 0 0 0px;
+  }
+
+  #company .table-background table tr td {
+    text-align: justify;
+    line-height: 1.5;
+    padding: 10px 10px 10px 20px;
+    border-bottom: none;
+    display: block;
+    width: 94%;
+  }
+
+  #company .table-background table tr .td-email {
+    border-bottom: none;
+    padding-bottom: 20px;
+  }
+
+  #company .osaka {
+    margin-bottom: 40px;
+  }
+
+  #company .okinawa {
+    margin-bottom: 70px;
+  }
+
+  #company .company-address {
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  #company .chizu {
+    text-align: center;
+    width: 100%;
+  }
+
+  #websystem .websystem-detail {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  #websystem .websystem-detail .websystem-txt {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  #websystem .websystem-detail .websystem-txt h3 {
+    padding: 10px 0px 10px 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0 auto;
+  }
+
+  #websystem .websystem-detail .websystem-txt p {
+    line-height: 1.8;
+    padding: 10px 10px 0px 10px;
+  }
+
+  #websystem .websystem-detail .websystem-txt .needs-inquiry {
+    width: 90%;
+    height: 56px;
+    margin: 0px auto 20px auto;
+    color: #707070;
+  }
+
+  #websystem .websystem-detail .websystem-txt .needs-inquiry h4 {
+    font-size: 14px;
+  }
+
+  #websystem .websystem-detail .websystem-txt .needs-inquiry .needs-detail span {
+    font-size: 13px;
+  }
+
+  #websystem .websystem-detail .websystem-img {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  #websystem .websystem-detail .websystem-img img {
+    width: 100%;
+  }
+
+  #websystem .websystem-detail:last-child {
+    margin-bottom: 150px;
+  }
+
+  #websystem .column {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #websystem .websystem-inquiry-buttom {
+    width: 90%;
+    height: 56px;
+    margin: 0px auto 60px auto;
+  }
+
+  #websystem .websystem-inquiry-buttom p {
+    display: block;
+    color: #707070;
+    padding-left: 50px;
+  }
+
+  #websystem .websystem-inquiry-buttom .inquiry-img {
+    padding-right: 30px;
+    padding-bottom: 14px;
+  }
+
+  #websystem .websystem-inquiry-buttom .inquiry-img img {
+    height: 1px;
+  }
+
+  #homepage .contetn-txt {
+    margin: 0 auto 50px auto;
+    line-height: 2;
+  }
+
+  #homepage .production {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  #homepage .production section {
+    width: 100%;
+    padding: 40px 0px 40px 0px;
+  }
+
+  #homepage .production section .production-content img {
+    margin-bottom: 20px;
+  }
+
+  #homepage .inner .inquiry-buttom {
+    width: 100%;
+    height: 56px;
+    margin: 0px auto 50px auto;
+    font-size: 14px;
+  }
+
+  #homepage .production-flow {
+    margin-bottom: 50px;
+  }
+
+  #homepage .production-flow .flow-flex {
+    display: block;
+    padding: 20px 20px 20px 20px;
+  }
+
+  #homepage .production-flow .flow-flex .flow-images {
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  #homepage .production-flow .flow-flex .flow-txt {
+    margin-left: 0px;
+  }
+
+  #homepage .production-flow .flow-flex .flow-txt h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  #homepage .production-flow .flow-flex .flow-txt p {
+    line-height: 1.7;
+  }
+
+  #homepage .production-flow .flow-flex .down-arrow {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  #homepage .production-flow .flow-flex-last {
+    padding-bottom: 70px;
+  }
+
+  #useful .useful-content-all {
+    display: block;
+    margin: 0 auto 50px auto;
+  }
+
+  #useful .useful-content-all .useful-detail-left {
+    margin-right: 0px;
+  }
+
+  #useful .useful-content-all .useful-detail {
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+
+  #useful .useful-content-all .useful-detail i {
+    font-size: 11px;
+    margin-right: 0px;
+  }
+
+  #useful .useful-content-all .useful-detail a img {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  #useful .useful-content-all .useful-detail a h3 {
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0px 2px 0px 2px;
+  }
+
+  #needs .need-content-title {
+    font-size: 18px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  #needs .need-content-title:after {
+    background-color: #C9E4F1;
+    border-radius: 20px;
+    content: "";
+    display: block;
+    height: 14px;
+    margin: -10px -16px 20px -16px;
+  }
+
+  #needs .main-title {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  #needs .main-title .title-left {
+    margin: 0 auto;
+    display: block;
+  }
+
+  #needs .main-title .title-left h2 {
+    font-size: 16px;
+    padding: 8px 0 10px 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  #needs .main-title .title-left img {
+    width: 100%;
+    margin: 0 auto 10px auto;
+  }
+
+  #needs .main-title .title-left p {
+    width: 98%;
+    line-height: 1.9;
+    margin: 0px auto 30px auto;
+  }
+
+  #needs .main-title .title-left .button {
+    text-align: center;
+    margin-bottom: 30px;
+    height: 40px;
+  }
+
+  #needs .main-title .title-left .button a {
+    background-color: #4185B2;
+    color: #fff;
+    border-radius: 30px;
+    width: 100%;
+    padding: 20px 70px;
+    font-size: 14px;
+  }
+
+  #needs .main-title .title-right {
+    display: block;
+  }
+
+  #needs .recommend {
+    border: 2px solid #4185B2;
+    padding: 20px 10px;
+    border-radius: 30px;
+    margin: 0 auto 60px auto;
+    width: 90%;
+  }
+
+  #needs .recommend p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  #needs .feature {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    margin-bottom: 50px;
+  }
+
+  #needs .feature .feature-detail {
+    display: block;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 4px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box .feature-image {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box .feature-image img {
+    width: 100%;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  #needs .feature .feature-detail .feature-detail-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0px 20px;
+  }
+
+  #needs .feature .feature-detail .left {
+    margin-left: 0px;
+  }
+
+  #needs .feature .feature-detail .right {
+    margin-right: 0px;
+  }
+
+  #needs .feature .feature-detail i {
+    font-size: 90px;
+    color: #4286B2;
+    text-align: center;
+  }
+
+  #needs .feature .feature-detail .fa-angle-right {
+    display: none;
+  }
+
+  #needs .feature .button {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  #needs .feature .button a {
+    background-color: #4185B2;
+    color: #fff;
+    border-radius: 40px;
+    width: 100%;
+    padding: 20px 70px;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+
+  #needs .function {
+    margin-top: 0px;
+    margin-bottom: 70px;
+  }
+
+  #needs .function .function-flex {
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  #needs .function .function-flex .function-detail {
+    background-color: #EFF8FC;
+    border-radius: 5px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  #needs .function .function-flex .function-detail .function-image {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 26px;
+  }
+
+  #needs .function .function-flex .function-detail h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  #needs .function .function-flex .function-detail .border {
+    width: 30px;
+    border-top: 1px solid #707070;
+    margin: 0 auto 20px auto;
+  }
+
+  #needs .function .function-flex .function-detail p {
+    margin: 0 30px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  #needs .function .bottom {
+    margin-bottom: 0px;
+  }
+
+  #needs .voice-txt {
+    display: block;
+    margin: 0 auto 70px auto;
+  }
+
+  #needs .voice-txt .voice-left {
+    margin: 0 auto 20px auto;
+    width: 25%;
+  }
+
+  #needs .voice-txt .voice-left .voice-image {
+    width: 100%;
+  }
+
+  #needs .voice-txt .voice-left .voice-image img {
+    width: 100%;
+  }
+
+  #needs .voice-txt .voice-left span {
+    font-size: 14px;
+  }
+
+  #needs .voice-txt .voice-right {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #needs .voice-txt .voice-right p {
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  #needs .introduction {
+    margin-bottom: 70px;
+  }
+
+  #needs .introduction .step {
+    display: block;
+    max-width: 100%;
+    margin: 0px 0px 30px 0px;
+  }
+
+  #needs .introduction .step .step-title {
+    padding: 0px 4px 0px 4px;
+    width: 90px;
+    height: 90px;
+    font-size: 13px;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+  #needs .introduction .step .step-title p {
+    margin-bottom: 6px;
+    margin-top: 18px;
+    color: #4185B2;
+  }
+
+  #needs .introduction .step .step-title h3 {
+    display: block;
+    width: 80px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin: 0 auto;
+    font-size: 13px;
+  }
+
+  #needs .introduction .step .step-txt {
+    width: 96%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #needs .introduction .step .step-txt p {
+    line-height: 1.6;
+    font-size: 14px;
+  }
+
+  #needs .introduction .step .step-txt .bold {
+    font-weight: 600;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  #needs .introduction .step .step-txt .text {
+    text-align: left;
+    display: inline-block;
+  }
+
+  #needs .introduction .vertical-line {
+    display: none;
+  }
+
+  #needs .needs-question {
+    list-style-type: none;
+    border: 1px solid #C1C1C1;
+    border-radius: 30px;
+    margin-bottom: 70px;
+  }
+
+  #needs .needs-question li {
+    padding: 20px 10px 0px 10px;
+    color: #3972B7;
+  }
+
+  #needs .needs-question li .question-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #needs .needs-question li .question-flex .question-left {
+    display: flex;
+    margin-right: 3px;
+    margin-left: 6px;
+  }
+
+  #needs .needs-question li .question-flex .question-left .fa-brands {
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+
+  #needs .needs-question li .question-flex .question-left p {
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  #needs .needs-question li .question-flex .question-right {
+    margin-right: 2px;
+    margin-top: 3px;
+  }
+
+  #needs .needs-question li .border {
+    border-top: 1px solid #C1C1C1;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  #needs .needs-question li .fa-solid {
+    text-align: right;
+    display: block;
+  }
+
+  #needs .needs-question li:first-child {
+    background-color: #C1C1C1;
+    border-radius: 29px 29px 0 0;
+    font-size: 18px;
+    color: #707070;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  #needs .needs-question li:last-child {
+    padding-bottom: 24px;
+  }
+
+  #needs .form {
+    background-color: #EBEFF7;
+    padding: 50px 20px;
+    margin-bottom: 60px;
+    width: 94%;
+  }
+
+  #needs .form p {
+    margin-bottom: 40px;
+    width: 100%;
+    display: block;
+  }
+
+  #needs .form p label {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  #needs .form p input {
+    display: block;
+    width: 100%;
+  }
+
+  #needs .form p select {
+    width: 100%;
+    height: 28px;
+    margin: 0;
+  }
+
+  #needs .form .line-account {
+    display: block;
+  }
+
+  #needs .form .line-account label {
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  #needs .form .line-account select {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  #needs .form .tool select {
+    width: 100%;
+  }
+
+  #needs .form .inquiry-textarea {
+    display: block;
+  }
+
+  #needs .form .inquiry-textarea textarea {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  #needs .form .terms {
+    text-align: center;
+    margin: 0 auto 20px auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+  }
+
+  #needs .form .terms label {
+    margin-left: 6px;
+  }
+
+  #needs .form .terms label a {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+  }
+
+  #needs .form button {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+    height: 70px;
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+  }
+
+  #inquiry .page-title-bottom {
+    line-height: 1.7;
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+
+  #inquiry .form {
+    background-color: #EBEFF7;
+    padding: 30px 20px;
+    margin-bottom: 70px;
+  }
+
+  #inquiry .form .form-inner {
+    margin: 0 auto;
+  }
+
+  #inquiry .form p {
+    margin-bottom: 30px;
+  }
+
+  #inquiry .form p label {
+    display: inline-block;
+    width: 300px;
+    text-align: left;
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+
+  #inquiry .form p input {
+    border: 1px solid #fff;
+    width: 100%;
+  }
+
+  #inquiry .form .inquiry-textarea {
+    display: block;
+  }
+
+  #inquiry .form .inquiry-textarea textarea {
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    border: 1px solid #fff;
+  }
+
+  #inquiry .form .terms {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  #inquiry .form .terms .checkbox {
+    width: 14px;
+    margin-right: 8px;
+  }
+
+  #inquiry input.checkbox {
+    margin: -4px 4px 3px 5px;
+  }
+
+  #inquiry .form .terms a {
+    font-size: 13px;
+    margin-left: -4px;
+    text-align: center;
+  }
+
+  #inquiry .form .terms label {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  #inquiry .form .button-check {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  #inquiry .form .button-check p {
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 14px;
+  }
+
+  #inquiry .form button {
+    width: 100%;
+    height: 60px;
+  }
+
+  #questions .page-title-bottom {
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  #questions .all-questions {
+    width: 94%;
+    margin-bottom: 70px;
+  }
+
+  #questions .all-questions li {
+    padding: 14px 10px 0px 10px;
+    color: #3972B7;
+  }
+
+  #questions .all-questions li .question-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+  }
+
+  #questions .all-questions li .question-flex .question-left {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    margin-right: 10px;
+    line-height: 1.3;
+  }
+
+  #questions .all-questions li .question-flex .question-left .fa-brands {
+    display: block;
+    padding-top: 0px;
+    margin-top: 2px;
+    margin-right: 8px;
+  }
+
+  #questions .all-questions li .question-flex .question-left p {
+    font-size: 14px;
+  }
+
+  #questions .all-questions li .question-flex .question-right {
+    margin-top: 2px;
+    margin-right: 10px;
+    flex-grow: 0;
+  }
+
+  #questions .all-questions li .border {
+    border-top: 1px solid #C1C1C1;
+    margin: 14px auto 0px auto;
+    width: 100%;
+  }
+
+  #questions .all-questions li .fa-solid {
+    text-align: right;
+    display: block;
+    margin-top: -1px;
+  }
+
+  #questions .all-questions li:first-child {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  #questions .all-questions li:last-child {
+    padding-bottom: 20px;
+  }
+
+  #questions .homepage-question {
+    margin-bottom: 70px;
+  }
+
+  #news .news-background {
+    padding: 50px 0;
+    margin-bottom: 70px;
+  }
+
+  #news .news-background .news-all {
+    max-width: 100%;
+    border-radius: 30px;
+    margin-bottom: 50px;
+  }
+
+  #news .news-background .news-all li {
+    padding: 20px 20px 0 20px;
+    color: #4d4d4d;
+  }
+
+  #news .news-background .news-all li .news-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  #news .news-background .news-all li .news-flex .news-left {
+    font-size: 20px;
+    margin: 0 10px 0 0px;
+  }
+
+  #news .news-background .news-all li .news-flex .news-right {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+    font-size: 15px;
+  }
+
+  #news .news-background .news-all li .news-flex .news-right time {
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
+
+  #news .news-background .news-all li .news-flex .question-right {
+    margin-right: 70px;
+  }
+
+  #news .news-background .news-all li .border {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  #news .news-background .news-all li:last-child {
+    padding-bottom: 45px;
+  }
+
+  #news .news-background .back-number nav {
+    width: 268px;
+    margin: 0 auto;
+  }
+
+  #news .news-background .back-number nav ul {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+  }
+
+  #news .news-background .back-number nav ul li {
+    padding: 20px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */
